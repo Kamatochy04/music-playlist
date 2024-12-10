@@ -1,19 +1,27 @@
-import styles from "./header.module.scss"
+import { useState } from "react";
+import { Container } from "../../../assets/component/container/Container";
+import { BurgerMenu } from "../../burgerMenu/ui/BurgerMenu";
+import styles from "./header.module.scss";
 
 export const Header = () => {
-    return (
-        <header className="header">
-        <div className="container">
-            <div className="logo">
-                Logo
-            </div>
+  const [isBurger, setIsBurger] = useState(false);
 
-            <div className="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  return (
+    <header className={styles.header}>
+      <Container>
+        <div className={styles.header__container}>
+          <div className={styles.logo}>Logo</div>
+          <div
+            className={styles.burger}
+            onClick={() => setIsBurger((prev) => !prev)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+      </Container>
+      {isBurger ? <BurgerMenu /> : null}
     </header>
-    )
-}
+  );
+};
