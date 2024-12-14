@@ -1,6 +1,7 @@
 import { LeftOutlined, UserOutlined } from "@ant-design/icons";
 
 import styles from "./menu.module.scss";
+import { Link } from "react-router-dom";
 
 export const BurgerMenu = () => {
   return (
@@ -16,12 +17,16 @@ export const BurgerMenu = () => {
           </div>
         </div>
         <ul className={styles.content}>
-          <li className={styles.content__item}>создать новый плейлист</li>
+          <li className={styles.content__item}>
+            <Link to={"/add"}>Создать новый плейлист</Link>
+          </li>
           <li className={styles.content__item}>
             посмотреть твои плейлисты на создание
           </li>
           <li className={styles.content__item}>
-            посмотреть плейлисты в которых ты добавляешь
+            <Link to="/playlist">
+              посмотреть плейлисты в которых ты добавляешь
+            </Link>
           </li>
           <li className={styles.content__item}>привязка спотифай аккаунта</li>
         </ul>

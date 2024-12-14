@@ -1,0 +1,22 @@
+.header {
+  padding: 15px;
+  background: var(--main-color);
+  border-radius: 0 0 20px 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.icon {
+  cursor: pointer;
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 10;
+  }
+}

@@ -1,0 +1,55 @@
+.playlist {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.img {
+  width: 60%;
+  aspect-ratio: 1;
+  background: rgb(27, 27, 27);
+  margin: 0 auto;
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 800;
+  color: #ffffff70;
+}
+
+.author {
+  font-size: 14px;
+  color: #ffffff86;
+  font-weight: 500;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.list {
+  border-top: 1px solid var(--main-color);
+  margin-top: 20px;
+  &__item {
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.name {
+  font-size: 16px;
+}
+
+.singer {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #ffffffa8;
+}
